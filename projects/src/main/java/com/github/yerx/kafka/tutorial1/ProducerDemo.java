@@ -1,14 +1,15 @@
 package com.github.yerx.kafka.tutorial1;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
 public class ProducerDemo {
     public static void main(String[] args) {
+
         String bootstrapServers = "127.0.0.1:9092";
 
         // create Producer properties
